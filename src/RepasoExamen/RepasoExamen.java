@@ -15,6 +15,7 @@ public class RepasoExamen {
 		System.out.println("4. Ejercicio Promedio numeros pares entre 1 y n");
 		System.out.println("5. Ejercicio suma de los digitos de n");
 		System.out.println("6. Ejercicio multiplo 7 o 11");
+		System.out.println("7. Divisible entre 3 y no 2");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -30,6 +31,8 @@ public class RepasoExamen {
 		case 5: ejercicioSumaDeSusDigitos();
 		break;
 		case 6: ejercicioMultiploDeSieteyOnce();
+		break;
+		case 7: ejercicioDivisblesEntreTresyDos();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -135,17 +138,27 @@ public class RepasoExamen {
 		System.out.println("La suma de los digitos es de: " + suma);
 		
 		}
-
+		// ejercicio 6
 		static void ejercicioMultiploDeSieteyOnce() {
 			System.out.print("Ingrese un numero: ");
 			
 			int numero = sc.nextInt();
-			if (numero % 7 == 0) {
-				System.out.println("El numero es multiplo de 7"); }
-				else if (numero % 11 == 0) {
-					System.out.println("El numero no es multiplo de 11");}
+			if (numero % 7 == 0 || numero % 11 == 0) {
+				System.out.println("El numero es multiplo de 7 o de 11"); }
 					else { System.out.println("El numero no es multiplo de ninguno ");
 				}
+		}
+		//Ejercicio 7
+		
+		static void ejercicioDivisblesEntreTresyDos() {
+			System.out.print("Ingres un numero: ");
+			int numero = sc.nextInt();
+			
+			for (int i = 1; i <= numero; i++) {
+				if ( i % 3 == 0 && i % 2 != 0) {
+					System.out.println(i);
+				}
+			}
 		}
 }
 

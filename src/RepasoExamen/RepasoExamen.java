@@ -13,6 +13,7 @@ public class RepasoExamen {
 		System.out.println("2. Ejercicio Factorial");
 		System.out.println("3. Ejercicio contar n cantidad");
 		System.out.println("4. Ejercicio Promedio numeros pares entre 1 y n");
+		System.out.println("5. Ejercicio suma de los digitos de n");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -25,10 +26,12 @@ public class RepasoExamen {
 		break;
 		case 4: ejercicioPromedio();
 		break;
+		case 5: ejercicioSumaDeSusDigitos();
+		break;
 		default: System.out.println("Opcion Invalida");
 		}
 	}
-	
+	//Ejercicio 1
 		static void ejercicioDivisibleEntreCuatro() {
 
 			System.out.print("Ingresa un numero: "); 
@@ -44,7 +47,7 @@ public class RepasoExamen {
 	
 	System.out.println("La suma es: " + suma);
 	}
-	
+	//Ejercicio 2
 		static void ejercicioFactorial() {
 			
 			System.out.print("Ingresa un numero: "); 
@@ -60,7 +63,7 @@ public class RepasoExamen {
 			System.out.println("El factorial es: " + factorial);
 			
 		}
-		
+		//Ejercicio 3
 		static void ejercicioContarNumeros() {
 			
 			System.out.print("cuantos números ingresará: ");
@@ -91,7 +94,7 @@ public class RepasoExamen {
 		System.out.println("Los numeros ceros son: " + ceros);
 		
 		}
-		
+		// Ejercicio 4
 		static void ejercicioPromedio() {
 			
 			System.out.print("Ingrese un numero: ");
@@ -110,5 +113,26 @@ public class RepasoExamen {
 			System.out.println("El promedio de los pares es de: " + promedio);
 		
 		}
+		//Ejercicio 5
+		static void ejercicioSumaDeSusDigitos() {
+			System.out.print("Ingrese un numero: ");
+			
+			long numero = sc.nextLong(); // use long ya que si usaba int me dejaba poner numeros pequeños con 10 digitos, long permite colocar
+			long suma = 0; 				// mas digitos
+			
+			while (numero>0) {
+				
+				long digito = numero % 10;
+				
+				suma+= digito;
+				
+				numero = numero / 10; 
+			}
+		
+		System.out.println("La suma de los digitos es de: " + suma);
 }
+
+}
+
+
 

@@ -15,7 +15,8 @@ public class RepasoExamen {
 		System.out.println("4. Ejercicio Promedio numeros pares entre 1 y n");
 		System.out.println("5. Ejercicio suma de los digitos de n");
 		System.out.println("6. Ejercicio multiplo 7 o 11");
-		System.out.println("7. Divisible entre 3 y no 2");
+		System.out.println("7. Ejerciicio Divisible entre 3 y no 2");
+		System.out.println("8. Ejercicio Leer hora formato 24hrs");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -33,6 +34,8 @@ public class RepasoExamen {
 		case 6: ejercicioMultiploDeSieteyOnce();
 		break;
 		case 7: ejercicioDivisblesEntreTresyDos();
+		break;
+		case 8: ejercicioHoraFormato24();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -160,6 +163,37 @@ public class RepasoExamen {
 				}
 			}
 		}
+		//Ejercicio 8
+		
+		static void ejercicioHoraFormato24() {
+			System.out.print("Ingrese una hora en formato (0-23); ");
+			int hora = sc.nextInt();
+			
+			if (hora >=0 && hora <= 11) {
+				System.out.println("Mañana");}
+				else if (hora >=12 && hora <=17) {
+					System.out.println("Tarde");}
+				else if (hora >=18 && hora <= 23) {
+					System.out.println("Noche");}
+				else {System.out.println("Hora invalida");}
+		}
+		
 }
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 

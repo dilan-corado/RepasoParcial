@@ -8,9 +8,10 @@ public class RepasoExamen {
 	
 	public static void main(String[] args) {
 	
-		System.out.println("Menu");
+		System.out.println("Menú");
 		System.out.println("1. Ejercicio divisible entre 4");
 		System.out.println("2. Ejercicio Factorial");
+		System.out.println("3. Ejercicio contar n cantidad");
 		System.out.println("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -18,6 +19,8 @@ public class RepasoExamen {
 		case 1: ejercicioDivisibleEntreCuatro();
 		break;
 		case 2: ejercicioFactorial();
+		break;
+		case 3: ejercicioContarNumeros();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -55,4 +58,36 @@ public class RepasoExamen {
 			
 		}
 		
+		static void ejercicioContarNumeros() {
+			
+			System.out.print("cuantos números ingresará: ");
+			
+			int numero = sc.nextInt();
+			int positivo = 0;
+			int negativo = 0;
+			int ceros = 0;
+			
+			for (int i = 1; i <= numero; i++) {
+				
+				System.out.print("Ingrese un numero: ");
+				int num = sc.nextInt();
+				
+				if (num > 0) {
+					positivo++;
+				}
+					else if (num < 0) {
+						negativo++;
+					}
+						else  {
+							ceros++; 
+					}
+			}
+		
+		System.out.println("Los numeros positivos son: "  + positivo);
+		System.out.println("Los numeros negativos son: " + negativo);
+		System.out.println("Los numeros ceros son: " + ceros);
+		
+		}
 }
+
+

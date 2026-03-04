@@ -12,7 +12,8 @@ public class RepasoExamen {
 		System.out.println("1. Ejercicio divisible entre 4");
 		System.out.println("2. Ejercicio Factorial");
 		System.out.println("3. Ejercicio contar n cantidad");
-		System.out.println("Elija una opcion: ");
+		System.out.println("4. Ejercicio Promedio numeros pares entre 1 y n");
+		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
 		switch (opcion) {
@@ -21,6 +22,8 @@ public class RepasoExamen {
 		case 2: ejercicioFactorial();
 		break;
 		case 3: ejercicioContarNumeros();
+		break;
+		case 4: ejercicioPromedio();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -88,6 +91,24 @@ public class RepasoExamen {
 		System.out.println("Los numeros ceros son: " + ceros);
 		
 		}
+		
+		static void ejercicioPromedio() {
+			
+			System.out.print("Ingrese un numero: ");
+			int numero = sc.nextInt();
+			int suma = 0;
+			int contador = 0; 
+			
+			for (int i = 1; i <=numero; i++) {
+				if (i % 2 == 0) {
+					suma += i;
+					contador ++;
+				}
+			}
+			
+			double promedio = (double) suma / contador;
+			System.out.println("El promedio de los pares es de: " + promedio);
+		
+		}
 }
-
 

@@ -17,6 +17,7 @@ public class RepasoExamen {
 		System.out.println("6. Ejercicio multiplo 7 o 11");
 		System.out.println("7. Ejerciicio Divisible entre 3 y no 2");
 		System.out.println("8. Ejercicio Leer hora formato 24hrs");
+		System.out.println("9. Ejercicio números romanos");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -37,6 +38,8 @@ public class RepasoExamen {
 		break;
 		case 8: ejercicioHoraFormato24();
 		break;
+		case 9: ejercicioNumerosRomanos();
+		break; 
 		default: System.out.println("Opcion Invalida");
 		}
 	}
@@ -176,6 +179,25 @@ public class RepasoExamen {
 				else if (hora >=18 && hora <= 23) {
 					System.out.println("Noche");}
 				else {System.out.println("Hora invalida");}
+		}
+		//Ejercicio 9
+		
+		static void ejercicioNumerosRomanos() {
+			System.out.print("Ingrese un numero del 1-5: ");
+			int numero = sc.nextInt();
+			
+			switch (numero) {
+			case 1:  System.out.print("I");
+			break;
+			case 2: System.out.print("II");
+			break;
+			case 3: System.out.print("III");
+			break;
+			case 4: System.out.print("IV");
+			break;
+			case 5: System.out.print("V");
+			default: System.out.print("Numero invalido");
+			}
 		}
 		
 }

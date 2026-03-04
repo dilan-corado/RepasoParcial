@@ -9,15 +9,16 @@ public class RepasoExamen {
 	public static void main(String[] args) {
 	
 		System.out.println("Menú");
-		System.out.println("1. Ejercicio divisible entre 4");
+		System.out.println("1. Ejercicio Divisible entre 4");
 		System.out.println("2. Ejercicio Factorial");
-		System.out.println("3. Ejercicio contar n cantidad");
+		System.out.println("3. Ejercicio Contar n cantidad");
 		System.out.println("4. Ejercicio Promedio numeros pares entre 1 y n");
-		System.out.println("5. Ejercicio suma de los digitos de n");
-		System.out.println("6. Ejercicio multiplo 7 o 11");
+		System.out.println("5. Ejercicio Suma de los digitos de n");
+		System.out.println("6. Ejercicio Multiplo 7 o 11");
 		System.out.println("7. Ejerciicio Divisible entre 3 y no 2");
 		System.out.println("8. Ejercicio Leer hora formato 24hrs");
-		System.out.println("9. Ejercicio números romanos");
+		System.out.println("9. Ejercicio Números romanos");
+		System.out.println("10. Ejercicio Opcion (Sumar, restar, multiplicar)");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -40,6 +41,8 @@ public class RepasoExamen {
 		break;
 		case 9: ejercicioNumerosRomanos();
 		break; 
+		case 10: ejercicioOpcionSumaRestaMultiplicacion();
+		break;
 		default: System.out.println("Opcion Invalida");
 		}
 	}
@@ -199,8 +202,33 @@ public class RepasoExamen {
 			default: System.out.print("Numero invalido");
 			}
 		}
+		//Ejercicio 10
+		static void ejercicioOpcionSumaRestaMultiplicacion() {
 		
+			System.out.println("1. Suma");
+			System.out.println("2. Resta");
+			System.out.println("3. Multiplicacion");
+			System.out.print("Elija una opción: ");
+			int opcion = sc.nextInt();
+			
+			System.out.println();
+			System.out.print("Ingrese el primer numero: ");
+			int numero1 = sc.nextInt();
+			System.out.print("Ingrese el segundo numero: ");
+			int numero2 = sc.nextInt();
+			
+			switch (opcion) {
+			case 1: System.out.print("Resultado:  " + (numero1+numero2));
+			break;
+			case 2: System.out.print("Resultado:  " + (numero1-numero2));
+			break;
+			case 3: System.out.print("Resultado:  " + (numero1*numero2));
+			break;
+			default: System.out.print("Opcion invalida");  
+			}
+		}
 }
+
 			
 		
 		

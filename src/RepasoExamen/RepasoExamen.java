@@ -22,6 +22,8 @@ public class RepasoExamen {
 		System.out.println("11. Ejercicio Muestra mayor y menor y valor absolito");
 		System.out.println("12. Ejercicio Tabla de division");
 		System.out.println("13. Ejercicio Cantidad de digitos pares");
+		System.out.println("14. Ejercicio Triangular");
+		System.out.println("15. Ejercicio Promedio numeros negativos");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -51,6 +53,10 @@ public class RepasoExamen {
 		case 12: ejercicioTablaDivision();
 		break;
 		case 13: cantidadDigitosPares();
+		break;
+		case 14: ejercicioTriangular();
+		break; 
+		case 15: ejercicioPromedioNegativos();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -288,9 +294,47 @@ public class RepasoExamen {
 		System.out.println("Cantidad de dígitos pares: " + contador);
 		
 		}	
+		//ejercicio 14
+		static void ejercicioTriangular() {
+			
+			System.out.print("Ingrese un numero: ");
+			int numero = sc.nextInt();
+			int suma = 0; 
+			int k = 1;
+			
+			while (suma < numero) {
+				suma += k;
+				k++;	}
+		    if (suma == numero) {
+		        System.out.println("El número es triangular");
+		    } else {
+		        System.out.println("El número NO es triangular");
+		    }
+		}
+		//ejercicio 15
+		
+		static void ejercicioPromedioNegativos() {
+			
+			System.out.print("Cuantos numeros ingresara: ");
+			int numero = sc.nextInt();
+			int contadorNegativo = 0;
+			int sumaNegativo=0;
+			
+			for (int i = 1; i <= numero; i++) {
+				System.out.print("Ingrese un numero: ");
+				int num = sc.nextInt();
+				
+				 if (num < 0) {
+			            sumaNegativo += num;
+			            contadorNegativo++;}
+			    }
+			    if (contadorNegativo > 0) {
+			        double promedio = (double) sumaNegativo / contadorNegativo;
+			        System.out.println("Promedio de negativos: " + promedio);} 
+			    else {System.out.println("No hay negativos");}
+		}
 }
 
-			
 		
 		
 		

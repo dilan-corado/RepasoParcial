@@ -19,8 +19,9 @@ public class RepasoExamen {
 		System.out.println("8. Ejercicio Leer hora formato 24hrs");
 		System.out.println("9. Ejercicio Números romanos");
 		System.out.println("10. Ejercicio Opcion (Sumar, restar, multiplicar)");
-		System.out.println("11. Ejercicio muestra mayor y menor y valor absolito");
-		System.out.println("12. Ejercicio tabla de division");
+		System.out.println("11. Ejercicio Muestra mayor y menor y valor absolito");
+		System.out.println("12. Ejercicio Tabla de division");
+		System.out.println("13. Ejercicio Cantidad de digitos pares");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -48,6 +49,8 @@ public class RepasoExamen {
 		case 11: ejercicioMayorMenorAbsoluto();
 		break;
 		case 12: ejercicioTablaDivision();
+		break;
+		case 13: cantidadDigitosPares();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -268,6 +271,23 @@ public class RepasoExamen {
 			}
 			
 		}
+		//ejercicio 13
+		
+		static void cantidadDigitosPares() {
+		System.out.print("Ingresa un número: ");
+		
+		int numero = sc.nextInt();
+		int contador = 0;
+		
+		while (numero > 0) {
+			int digito = numero % 10;
+				if (digito % 2 == 0) {
+					contador++;}
+				numero = numero / 10; 
+				}
+		System.out.println("Cantidad de dígitos pares: " + contador);
+		
+		}	
 }
 
 			

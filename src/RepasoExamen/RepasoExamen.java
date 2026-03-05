@@ -19,6 +19,7 @@ public class RepasoExamen {
 		System.out.println("8. Ejercicio Leer hora formato 24hrs");
 		System.out.println("9. Ejercicio Números romanos");
 		System.out.println("10. Ejercicio Opcion (Sumar, restar, multiplicar)");
+		System.out.println("11. Ejercicio muestra mayor y menor y valor absolito");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -42,6 +43,8 @@ public class RepasoExamen {
 		case 9: ejercicioNumerosRomanos();
 		break; 
 		case 10: ejercicioOpcionSumaRestaMultiplicacion();
+		break;
+		case 11: ejercicioMayorMenorAbsoluto();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -227,7 +230,32 @@ public class RepasoExamen {
 			default: System.out.print("Opcion invalida");  
 			}
 		}
+		//ejercicio 11
+		static void ejercicioMayorMenorAbsoluto() {
+			
+			System.out.print("Ingrese el primer número: ");
+			int numero1 = sc.nextInt();
+			System.out.print("Ingrese el segundo numero: ");
+			int numero2= sc.nextInt();
+			
+			
+			if(numero1 > numero2) {
+			    System.out.println("El numero mayor es: " + numero1);
+			    System.out.println("El numero menor es: " + numero2);
+			}
+			else {
+			    System.out.println("El numero mayor es: " + numero2);
+			    System.out.println("El numero menor es: " + numero1);
+			}
+
+			int diferencia = Math.abs(numero1 - numero2);
+
+			System.out.println("Diferencia absoluta es: " + diferencia);
+		}
 }
+
+			
+		
 
 			
 		

@@ -20,6 +20,7 @@ public class RepasoExamen {
 		System.out.println("9. Ejercicio Números romanos");
 		System.out.println("10. Ejercicio Opcion (Sumar, restar, multiplicar)");
 		System.out.println("11. Ejercicio muestra mayor y menor y valor absolito");
+		System.out.println("12. Ejercicio tabla de division");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -45,6 +46,8 @@ public class RepasoExamen {
 		case 10: ejercicioOpcionSumaRestaMultiplicacion();
 		break;
 		case 11: ejercicioMayorMenorAbsoluto();
+		break;
+		case 12: ejercicioTablaDivision();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -252,10 +255,20 @@ public class RepasoExamen {
 
 			System.out.println("Diferencia absoluta es: " + diferencia);
 		}
-}
-
+		//ejercicio 12
+		static void ejercicioTablaDivision() {
 			
-		
+			System.out.print("ingrese un numero: ");
+			int numero = sc.nextInt();
+			
+			for (int i = 1; i<=10; i++) {
+				double resultado = (double)numero / i;
+				
+				System.out.println(numero + "/" + i + " = " + resultado);
+			}
+			
+		}
+}
 
 			
 		

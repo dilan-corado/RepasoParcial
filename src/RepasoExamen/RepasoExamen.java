@@ -26,6 +26,7 @@ public class RepasoExamen {
 		System.out.println("15. Ejercicio Promedio numeros negativos");
 		System.out.println("16. Ejercicio Multiplos de 6");
 		System.out.println("17. Ejercicio Potencia de 2");
+		System.out.println("18. Ejercicio Invertido");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -63,6 +64,8 @@ public class RepasoExamen {
 		case 16: ejercicioMultiploDe6();
 		break;
 		case 17: ejercicioPotenciadeDos();
+		break;
+		case 18: ejercicioNumeroInvertido();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -364,6 +367,22 @@ public class RepasoExamen {
 				 System.out.println("Es potencia de 2");} 
 			else {
 		        System.out.println("No es potencia de 2"); }
+		}
+		//ejercicio 18
+		static void ejercicioNumeroInvertido() {
+			
+			System.out.print("Ingrese un numero: ");
+			
+			int numero = sc.nextInt();
+			int invertido = 0;
+			
+			while (numero > 0) {
+				int digito = numero % 10;
+				invertido = invertido * 10 + digito;
+				
+				numero = numero/10;
+			}
+			System.out.print("Numero inverido es: " + invertido);
 		}
 }
 			

@@ -24,7 +24,8 @@ public class RepasoExamen {
 		System.out.println("13. Ejercicio Cantidad de digitos pares");
 		System.out.println("14. Ejercicio Triangular");
 		System.out.println("15. Ejercicio Promedio numeros negativos");
-		System.out.println("16. Multiplos de 6");
+		System.out.println("16. Ejercicio Multiplos de 6");
+		System.out.println("17. Ejercicio Potencia de 2");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -60,6 +61,8 @@ public class RepasoExamen {
 		case 15: ejercicioPromedioNegativos();
 		break;
 		case 16: ejercicioMultiploDe6();
+		break;
+		case 17: ejercicioPotenciadeDos();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -348,7 +351,22 @@ public class RepasoExamen {
 				System.out.println(multiplo);
 			}
 		}
+		//ejercicio 17
+		static void ejercicioPotenciadeDos() {
+			
+			System.out.print("Ingrese un numero: ");
+			int numero = sc.nextInt();
+			
+			while (numero > 1 && numero % 2 == 0) {
+				numero = numero / 2; }
+				
+			if ( numero == 1) {
+				 System.out.println("Es potencia de 2");} 
+			else {
+		        System.out.println("No es potencia de 2"); }
+		}
 }
+			
 		
 
 		

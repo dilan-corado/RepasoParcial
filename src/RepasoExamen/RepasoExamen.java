@@ -27,6 +27,8 @@ public class RepasoExamen {
 		System.out.println("16. Ejercicio Multiplos de 6");
 		System.out.println("17. Ejercicio Potencia de 2");
 		System.out.println("18. Ejercicio Invertido");
+		System.out.println("19. Ejercicio Suma Par o Impar");
+		System.out.println("20. Ejercicio Temperatura");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -66,6 +68,10 @@ public class RepasoExamen {
 		case 17: ejercicioPotenciadeDos();
 		break;
 		case 18: ejercicioNumeroInvertido();
+		break;
+		case 19: ejercicioSumaParoImpar();
+		break;
+		case 20: ejercicioTemperatura();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -384,9 +390,30 @@ public class RepasoExamen {
 			}
 			System.out.print("Numero inverido es: " + invertido);
 		}
-}
+		//ejercicio 19
+		static void ejercicioSumaParoImpar() {
 			
+		System.out.print("Ingrese un numero: ");
+		int numero = sc.nextInt();
+		int suma = 0;
 		
+		for ( int i = 1; i<= numero; i++) {
+			suma += i; }
+		if ( suma % 2 == 0) {
+			System.out.println("La suma es par");}
+		else { System.out.println("La suma es impar");}
+		}
+		//ejercicio 20
+		static void ejercicioTemperatura() {
+
+			    System.out.print("Ingrese la temperatura en Celsius: ");
+			    double celsius = sc.nextDouble();
+
+			    double fahrenheit = (celsius * 9 / 5) + 32;
+
+			    System.out.println("Temperatura en Fahrenheit: " + fahrenheit);
+			}
+}
 
 		
 		

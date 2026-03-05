@@ -24,6 +24,7 @@ public class RepasoExamen {
 		System.out.println("13. Ejercicio Cantidad de digitos pares");
 		System.out.println("14. Ejercicio Triangular");
 		System.out.println("15. Ejercicio Promedio numeros negativos");
+		System.out.println("16. Multiplos de 6");
 		System.out.print("Elija una opcion: ");
 		int opcion = sc.nextInt();
 		
@@ -57,6 +58,8 @@ public class RepasoExamen {
 		case 14: ejercicioTriangular();
 		break; 
 		case 15: ejercicioPromedioNegativos();
+		break;
+		case 16: ejercicioMultiploDe6();
 		break;
 		default: System.out.println("Opcion Invalida");
 		}
@@ -312,7 +315,6 @@ public class RepasoExamen {
 		    }
 		}
 		//ejercicio 15
-		
 		static void ejercicioPromedioNegativos() {
 			
 			System.out.print("Cuantos numeros ingresara: ");
@@ -333,7 +335,21 @@ public class RepasoExamen {
 			        System.out.println("Promedio de negativos: " + promedio);} 
 			    else {System.out.println("No hay negativos");}
 		}
+		//ejercicio 16
+		static void ejercicioMultiploDe6() {
+			
+			System.out.print("Ingrese un numero: ");
+			int numero = sc.nextInt();
+			
+			for (int i = 1; i <= numero; i++) {
+				
+				int multiplo = 6 * i;
+				
+				System.out.println(multiplo);
+			}
+		}
 }
+		
 
 		
 		
